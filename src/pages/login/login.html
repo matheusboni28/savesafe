@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <form id="login-form1">
+    <ion-item id="login-textarea1">
+      <ion-label>
+        Entre ou cadastre-se
+      </ion-label>
+      <ion-textarea placeholder=""></ion-textarea>
+    </ion-item>
+    <ion-item id="login-input2">
+      <ion-label></ion-label>
+      <ion-input type="text" placeholder="nome do usuário"></ion-input>
+    </ion-item>
+    <ion-item id="login-input3">
+      <ion-label></ion-label>
+      <ion-input type="password" placeholder="senha"></ion-input>
+    </ion-item>
+  </form>
+  <button id="login-button1" ion-button color="balanced" block>
+    Entre
+  </button>
+  <button id="login-button2" ion-button color="positive" block on-click="goToCadastro()">
+    Cadatre-se
+  </button>
+</ion-content>

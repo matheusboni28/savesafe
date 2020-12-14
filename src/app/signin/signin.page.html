@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      SaveSafe
+    </ion-title>
+  </ion-toolbar>
+</ion-header><br>
+
+<ion-content padding id="page1">
+  <form id="login-form1">
+    <img src="assets/img/n7p4o2l1TV26ozmvSVCP_download.png" style="display:block;width:20%;height:auto;margin-left:auto;margin-right:auto;"/>
+    <ion-item id="login-input2">
+      <ion-label></ion-label>
+      <ion-input type="text" placeholder="nome" #name></ion-input>
+    </ion-item>
+    <ion-item id="login-input2">
+      <ion-label></ion-label>
+      <ion-input type="email" placeholder="e-mail" #email></ion-input>
+    </ion-item>
+    <ion-item id="login-input2">
+      <ion-label></ion-label>
+    <ion-input type="text" placeholder="nome do usuário" #username></ion-input>
+    </ion-item>
+    <ion-item id="login-input3">
+      <ion-label></ion-label>
+      <ion-input type="password" placeholder="senha" #pwd></ion-input>
+    </ion-item>
+  </form><br>
+  <ion-button ion-button expand="block" (click)="saveUser({
+    'username': username.value,
+    'password': pwd.value,
+    'email': email.value,
+    'nome': name.value
+  })">Cadastrar</ion-button>
+
+</ion-content>
+<footer style="text-align: center;color: grey; margin-bottom: 7%;">Projeto Mobile 2020</footer>

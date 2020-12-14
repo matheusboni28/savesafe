@@ -1,0 +1,64 @@
+<ion-app>
+  <ion-menu id="menu" side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item (click)="files()">
+          <ion-icon name="albums" slot="start"></ion-icon>
+          <ion-label>Arquivos</ion-label>
+        </ion-item>
+        <ion-item (click)="upload()">
+          <ion-icon name="add-circle" slot="start"></ion-icon>
+          <ion-label>Novo upload</ion-label>
+        </ion-item>
+        <ion-item (click)="profile()">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label>Perfil</ion-label>
+        </ion-item>
+        <ion-item (click)="logOut()">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          <ion-label>Sair</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Bem vindo, Matheus</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen>
+      <ion-list>
+        <ion-list-header>
+          Arquivos
+        </ion-list-header>
+
+        <ion-toolbar>
+          <ion-searchbar #search (change)="teste(search.value)"></ion-searchbar>
+        </ion-toolbar>
+
+        <div *ngFor="let item of showList">
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="assets/img/folder.png">
+            </ion-avatar>
+            <ion-label (click)="loadFiles()">
+              <h2>{{item.name}}</h2>
+              <h3>{{item.date}}</h3>
+              <p>{{item.desc}}</p>
+            </ion-label>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-content>
+  </div>
+</ion-app>

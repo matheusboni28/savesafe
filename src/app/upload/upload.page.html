@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      SaveSafe
+    </ion-title>
+  </ion-toolbar>
+</ion-header><br>
+
+<ion-content padding id="page1">
+  <form id="login-form1">
+    <img src="assets/img/upload.png" style="display:block;width:20%;height:auto;margin-left:auto;margin-right:auto;"/>
+    <ion-item>
+      <ion-label>Pasta</ion-label>
+      <ion-select ok-text="Selecionar" cancel-text="Cancelar">
+        <ion-select-option value="np">Nova pasta</ion-select-option>
+        <ion-select-option value="fc">Faculdade 2020</ion-select-option>
+        <ion-select-option value="tcc">TCC</ion-select-option>
+        <ion-select-option value="cs">Casamento</ion-select-option>
+        <ion-select-option value="fa7">Férias Arraial do Cabo 2017</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Buscar arquivo</ion-label>
+      <ion-select value="files" interface="action-sheet">
+        <ion-select-option value="enable">Buscando arquivos...</ion-select-option>
+        <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+      </ion-select>
+    </ion-item>
+  </form><br>
+  <ion-button ion-button color="success" expand="block" (click)="redirectToMain()">Carregar</ion-button><br>
+  <ion-button ion-button expand="block" (click)="backMenu()">Voltar</ion-button>
+</ion-content>
+<footer style="text-align: center;color: grey; margin-bottom: 7%;">Projeto Mobile 2020</footer>

@@ -1,0 +1,47 @@
+<ion-app>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-icon name="arrow-back" style="margin-top: 5%;" (click)="backMenu()"></ion-icon> 
+        <ion-buttons slot="start">
+          <!-- <ion-menu-button></ion-menu-button> -->
+        </ion-buttons>
+        <ion-title>Faculdade 2020</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen>
+      <ion-list>
+        <ion-list-header>
+          Documentos
+        </ion-list-header>
+
+        <ion-toolbar>
+          <ion-searchbar #search (change)="teste(search.value)"></ion-searchbar>
+        </ion-toolbar>
+
+        <div *ngFor="let item of showList">
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="assets/img/pdf.png">
+            </ion-avatar>
+            <ion-label>
+              <h2>{{item.name}}</h2>
+              <h3>{{item.date}}</h3>
+              <p>{{item.desc}}</p>
+            </ion-label>
+          </ion-item>
+        </div>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="assets/img/word.png">
+          </ion-avatar>
+          <ion-label>
+            <h2>Trabalho_Grupo3.doc</h2>
+            <h3>Enviado em: 12-11-2020</h3>
+            <p>Trabalho de programção grupo 3</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </div>
+</ion-app>
